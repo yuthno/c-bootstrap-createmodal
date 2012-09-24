@@ -15,8 +15,7 @@ Bootstrap Addon for using twitter bootstrap javascript for helping to create mod
 				content(bool or string): (optional)String of contents, Its can be HTML Tag
 				btn[{id(string), classname(string), txt(string)},...]: (optional) Object of buttons, its has properties: id(id of button), classname(additional class of button except 'btn', txt(Label of button))
 				closebtntxt(string): (optional)Label of close button, default: 'Close'
-
-Example: 
+				Example: 
 		$('#logout-btn').createModal({
 			id : '#logout-comfirmation-modal',
 			header : 'Logout Confirmation',
