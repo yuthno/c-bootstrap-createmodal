@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Custom Bootstrap Create Modal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- styles sheet-->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    </head>
+
+    <body data-spy="scroll" data-target=".subnav" data-offset="50">
+		<a data-toggle="modal" class="btn" id="internal-content-btn">Text Content</a> 
+		<a data-toggle="modal" class="btn" id="external-content-btn">Remote Content</a> 
+		
+		
+        <!-- javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap-modal.js"></script>
+		<script src="assets/js/c-bootstrap-createmodal.js"></script>
+		<script type="text/javascript">
+		
+			!function ($) {
+				
+				$(function(){
+					
+					
+					$('#internal-content-btn').createmodal({
+						id : 'internal-content-modal',
+						header : 'Logout Confirmation',
+						content: 'Thanks for your hard work, Are you sure to logout?',
+						modalwidth : 500,
+						keyboard: false,
+						btn : [
+							{
+							id : 'sure',
+							classname : 'btn-success',
+							txt : 'Sure'},
+							{
+							id : 'not sure',
+							classname : 'btn-warning',
+							txt : 'Not sure'
+							}
+						]
+					});
+					
+					$('#external-content-btn').createmodal({
+						id : 'external-content-modal',
+						header : 'Add contact',
+						remote: 'external/addform.html',
+						backdrop: 'static',
+						modalwidth : 600,
+						keyboard: false,
+						btn : [
+							{
+							id : 'send',
+							classname : 'btn-success',
+							txt : 'Send'
+							}
+						],
+						closebtntxt: 'Cancel'
+					});
+					
+				})
+				
+			}(window.jQuery)
+		</script>
+    </body>
+	
+	
+</html>
+
